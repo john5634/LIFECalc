@@ -1,0 +1,82 @@
+import com.sun.org.apache.xpath.internal.SourceTree;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter the person age between 17 to 50");
+        int age = input.nextInt();
+        System.out.println("Enter 1  to 6 pack(s) of cigarette  smoke per day");
+        int packOfCigaretteSmokePerDay = input.nextInt();
+        System.out.println("Enter the person year of education between 1year to 17 years");
+        int yearOfEducation = input.nextInt();
+        System.out.println("Enter the percent of the person family that have breast cancer between 1% to 90%");
+        double familyHistoryOfBreastCancer = input.nextDouble();
+        System.out.println("Enter the quantities of Alcohol consume between 1 bottle to 10 Bottles");
+        int bottlesOfAlcoholConsumedPerDay = input.nextInt();
+        System.out.println("Enter  hours of sleep per day between 1 hour to 10 hours");
+        int hoursOfSleepPerDay = input.nextInt();
+        System.out.println("     ");
+
+
+
+
+        // Create the object  to call the  method
+
+        Bob myBob  = new Bob( age,  packOfCigaretteSmokePerDay, yearOfEducation, familyHistoryOfBreastCancer, bottlesOfAlcoholConsumedPerDay, hoursOfSleepPerDay);
+
+        myBob.setAge(age);
+        myBob.setHoursOfSleepPerDay(hoursOfSleepPerDay);
+        myBob.setFamilyHistoryOfCancer(familyHistoryOfBreastCancer);
+        myBob.setBottlesOfAlcoholConsumedPerDay(bottlesOfAlcoholConsumedPerDay);
+        myBob.setYearOfEducation(yearOfEducation);
+        myBob.setPackOfCigaretteSmokePerDay(packOfCigaretteSmokePerDay);
+        System.out.println("                                                                           ");
+
+        System.out.println("The date life expectancy was created  " + Bob.getDateLifeExpectancyCalculate());
+
+        System.out.println("    ");
+        System.out.println("This Bob at age  " + age + "  would add/ or subtract this years " + myBob.getNumberOfYear());
+
+        System.out.println("               ");
+
+        // Generate random numbers
+        int number = 1+(int)(Math.random()* 6);
+        int number2 = 17+(int)(Math.random()*25);
+        System.out.println("The random number is  "+ number);
+
+        // The use of the switch statement print the health history of  Bob's Family
+        switch (number){
+            case 1:  System.out.print("Bob's son Edward  age "+ number2+ "  who  does not drink or smoke");
+                break;
+            case 2:  System.out.print("Bob's son James  age " + number2 + " the Alcoholic who is diagnosed with lever cancer");
+                break;
+            case 3:  System.out.print("Bob's son Bob Jr.  age " + number2 + " who drink and smoke 5 packs of cigarette per day, and diagnosed with lung cancer");
+                break;
+            case 4:  System.out.print("Bob's daughter  Savannah  age " +number2  + "  who was diagnosed with  breast cancer");
+                break;
+            case 5:  System.out.print("Bob's daughter Linda age " +  number2 + " who is undergoing chemotherapy  ");
+                break;
+            default:   System.out.print(" No match");
+
+
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+}
+
+
