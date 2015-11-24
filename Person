@@ -1,0 +1,94 @@
+import java.util.Scanner;
+
+public class Person {
+    private int age;
+    private int packOfCigaretteSmokePerDay;
+    private int yearOfEducation;
+    private double familyHistoryOfCancer;
+    private int bottlesOfAlcoholConsumedPerDay;
+    private double hoursOfSleepPerDay;
+    int numberOfYear;
+    private static java.util.Date dateLifeExpectancyCalculate;
+
+    // The default Constructor
+    public Person(){
+
+        dateLifeExpectancyCalculate =  new java.util.Date();
+
+
+    }
+
+    public Person(int age, int packOfCigaretteSmokePerDay,int yearOfEducation,double familyHistoryOfCancer,int bottlesOfAlcoholConsumedPerDay,int hoursOfSleepPerDay){
+        this.age =age;
+        this.packOfCigaretteSmokePerDay = packOfCigaretteSmokePerDay;
+        this.yearOfEducation = yearOfEducation;
+        this.familyHistoryOfCancer = familyHistoryOfCancer;
+        this.bottlesOfAlcoholConsumedPerDay = bottlesOfAlcoholConsumedPerDay;
+        this.hoursOfSleepPerDay = hoursOfSleepPerDay;
+        dateLifeExpectancyCalculate =  new java.util.Date();
+
+
+    }
+    public int getNumberOfYear() {
+        numberOfYear = age;
+
+
+        if (getPackOfCigaretteSmokePerDay() > 0 && getYearOfEducation() < 12 && getFamilyHistoryOfCancer() > 50 && getBottlesOfAlcoholConsumedPerDay() > 2
+                && getHoursOfSleepPerDay() < 8) {
+            numberOfYear-=3;
+        } else
+
+            numberOfYear+=3;
+
+        return numberOfYear;
+
+    }
+
+
+    public void setAge(int age){
+        this.age = age;
+    }
+    public int getPackOfCigaretteSmokePerDay(){
+
+
+        return numberOfYear;
+
+    }
+    public void setPackOfCigaretteSmokePerDay(int packOfCigaretteSmokePerDay){
+
+        this.packOfCigaretteSmokePerDay = packOfCigaretteSmokePerDay;
+    }
+    public int getYearOfEducation(){
+        return yearOfEducation;
+    }
+    public void setYearOfEducation(int yearOfEducation){
+        this.yearOfEducation = yearOfEducation;
+    }
+    public double getFamilyHistoryOfCancer(){
+        return familyHistoryOfCancer;
+    }
+    public void setFamilyHistoryOfCancer(double familyHistoryOfCancer){
+        this.familyHistoryOfCancer = familyHistoryOfCancer;
+    }
+    public int getBottlesOfAlcoholConsumedPerDay(){
+        return bottlesOfAlcoholConsumedPerDay;
+    }
+    public void setBottlesOfAlcoholConsumedPerDay(int bottlesOfAlcoholConsumedPerDay){
+        this.bottlesOfAlcoholConsumedPerDay = bottlesOfAlcoholConsumedPerDay;
+    }
+    public double getHoursOfSleepPerDay(){
+        return hoursOfSleepPerDay;
+    }
+    public void setHoursOfSleepPerDay(double hoursOfSleepPerDay){
+        this.hoursOfSleepPerDay = hoursOfSleepPerDay;
+
+    }
+    public static java.util.Date getDateLifeExpectancyCalculate(){
+        return  dateLifeExpectancyCalculate;
+    }
+
+
+
+}
+
+
