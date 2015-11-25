@@ -1,24 +1,27 @@
 import java.util.Scanner;
 
 public class Person {
+    //---Requirement 25: Modifier---
     private int age;
     private int packOfCigaretteSmokePerDay;
-    private int yearOfEducation;
+    private double yearOfEducation;
     private double familyHistoryOfCancer;
     private int bottlesOfAlcoholConsumedPerDay;
     private double hoursOfSleepPerDay;
     int numberOfYear;
     private static java.util.Date dateLifeExpectancyCalculate;
 
+    //---Requirement 2: Declaring constants---
+    final int MALELIFEEXP = 85;
+    final int FEMALELIFEEXP = 87;
     // The default Constructor
-    public Person(){
+    public Person(int age, double yearOfEducation, int bottlesOfAlcoholConsumedPerDay, double familyHistoryOfBreastCancer, int packOfCigaretteSmokePerDay, int hoursOfSleepPerDay){
 
         dateLifeExpectancyCalculate =  new java.util.Date();
-
-
     }
 
-    public Person(int age, int packOfCigaretteSmokePerDay,int yearOfEducation,double familyHistoryOfCancer,int bottlesOfAlcoholConsumedPerDay,int hoursOfSleepPerDay){
+    public Person(int age, int packOfCigaretteSmokePerDay,double yearOfEducation,double familyHistoryOfCancer,int bottlesOfAlcoholConsumedPerDay,int hoursOfSleepPerDay){
+        //---Requirement 24: Using "this" keyword---
         this.age =age;
         this.packOfCigaretteSmokePerDay = packOfCigaretteSmokePerDay;
         this.yearOfEducation = yearOfEducation;
@@ -32,14 +35,14 @@ public class Person {
     public int getNumberOfYear() {
         numberOfYear = age;
 
+        //---Requirement 4: Conditional Operator---
+        //---Requirement 5: Operators---
 
         if (getPackOfCigaretteSmokePerDay() > 0 && getYearOfEducation() < 12 && getFamilyHistoryOfCancer() > 50 && getBottlesOfAlcoholConsumedPerDay() > 2
                 && getHoursOfSleepPerDay() < 8) {
             numberOfYear-=3;
-        } else
-
-            numberOfYear+=3;
-
+        }
+        else numberOfYear+=3;
         return numberOfYear;
 
     }
@@ -49,19 +52,20 @@ public class Person {
         this.age = age;
     }
     public int getPackOfCigaretteSmokePerDay(){
-
-
         return numberOfYear;
-
     }
+
+    //---Requirement 9: Method Passing an argument by value---
     public void setPackOfCigaretteSmokePerDay(int packOfCigaretteSmokePerDay){
 
         this.packOfCigaretteSmokePerDay = packOfCigaretteSmokePerDay;
     }
-    public int getYearOfEducation(){
+
+    //---Requirement 10: Return value from method---
+    public double getYearOfEducation(){
         return yearOfEducation;
     }
-    public void setYearOfEducation(int yearOfEducation){
+    public void setYearOfEducation(double yearOfEducation){
         this.yearOfEducation = yearOfEducation;
     }
     public double getFamilyHistoryOfCancer(){
@@ -90,5 +94,3 @@ public class Person {
 
 
 }
-
-
