@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Survey {
+
+    //---Requirement 14: Create an object---
+    Person person1  = new Person( 789, 789, 789.0, 789, 789, 789);
+    public void surveyPerson() {
+
+//---Requirement 21: Add exception handling---------------------------------------------------------------------------------------------
+//---Requirement 26: Println Method---
+
+    Scanner input = new Scanner(System.in);
+
+    System.out.println("Enter your age: ");
+    person1.setAge(input.nextInt());
+
+    System.out.println("How many packs of cigarettes do you smoke per day? ");
+    person1.setPackOfCigaretteSmokePerDay(input.nextInt());
+
+    System.out.println("How many years of college have you completed? ");
+    person1.setYearOfEducation(input.nextInt());
+
+    System.out.println("Do you have a family history of cancer? ");
+    double familyHistoryOfBreastCancer = input.nextDouble();
+    System.out.println("How many drinks of alcohol do you consume on a weekly basis? ");
+    int bottlesOfAlcoholConsumedPerDay = input.nextInt();
+    System.out.println("How many hours do you sleep per night?");
+    int hoursOfSleepPerDay = input.nextInt();
+    System.out.println("Enter your name: ");
+    //---Requirment 6: String Class Method---
+    //String name = input.nextLine();
+    //System.out.println(name.toUpperCase());
+    System.out.println("     ");
+
+
+}
+    public void printLE(){
+
+        System.out.println(person1.getBottlesOfAlcoholConsumedPerDay());
+    }
+
+}
+
