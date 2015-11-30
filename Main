@@ -1,4 +1,4 @@
-//---Requirement 1: Importing Scanner Class---
+///---Requirement 1: Importing Scanner Class---
 //---Requirement 12: Add multiple classes---
 //---Requirement 20: Encapsulation---
 //---Requirement 18: Polymorphism---
@@ -7,66 +7,13 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
 
-        //---Requirement 21: Add exception handling---------------------------------------------------------------------------------------------
-        //---Requirement 26: Println Method---
-        System.out.println("Enter your age: ");
-        int age = input.nextInt();
-        System.out.println("How many packs of cigarettes do you smoke per day? ");
-        int packOfCigaretteSmokePerDay = input.nextInt();
-        System.out.println("How many years of college have you completed? ");
-        double yearOfEducation = input.nextDouble();
-        System.out.println("Do you have a family history of cancer? ");
-        double familyHistoryOfBreastCancer = input.nextDouble();
-        System.out.println("How many drinks of alcohol do you consume on a weekly basis? ");
-        int bottlesOfAlcoholConsumedPerDay = input.nextInt();
-        System.out.println("How many hours do you sleep per night?");
-        int hoursOfSleepPerDay = input.nextInt();
-        System.out.println("Enter your name: ");
-        //---Requirment 6: String Class Method---
-        //String name = input.nextLine();
-        //System.out.println(name.toUpperCase());
-        System.out.println("     ");
+        Survey survey1  = new Survey();
 
+        survey1.surveyPerson();
+        survey1.printLE();
 
-        //---Requirement 14: Create an object---
-        Oldperson myOldperson  = new Oldperson( age,  packOfCigaretteSmokePerDay, yearOfEducation, familyHistoryOfBreastCancer, bottlesOfAlcoholConsumedPerDay, hoursOfSleepPerDay);
-
-        myOldperson.setAge(age);
-        myOldperson.setHoursOfSleepPerDay(hoursOfSleepPerDay);
-        myOldperson.setFamilyHistoryOfCancer(familyHistoryOfBreastCancer);
-        myOldperson.setBottlesOfAlcoholConsumedPerDay(bottlesOfAlcoholConsumedPerDay);
-        myOldperson.setYearOfEducation(yearOfEducation);
-        myOldperson.setPackOfCigaretteSmokePerDay(packOfCigaretteSmokePerDay);
-        System.out.println("                                                                           ");
-        System.out.println("The date life expectancy was created  " + Oldperson.getDateLifeExpectancyCalculate());
-        System.out.println("    ");
-        System.out.println("This Oldperson at age  " + age + "  would add/ or subtract this years " + myOldperson.getNumberOfYear());
-        System.out.println("               ");
-
-        // Generate random numbers
-        // ---Requirement 7: Math Class Method---
-        int number = 1+(int)(Math.random()* 6);
-        int number2 = 17+(int)(Math.random()*25);
-        System.out.println("The random number is  "+ number);
-
-        // ---Requirement 3: Switch Statement---
-        switch (number){
-            case 1:  System.out.print("Oldperson's son Edward  age "+ number2+ "  who  does not drink or smoke");
-                break;
-            case 2:  System.out.print("Oldperson's son James  age " + number2 + " the Alcoholic who is diagnosed with lever cancer");
-                break;
-            case 3:  System.out.print("Oldperson's son Oldperson Jr.  age " + number2 + " who drink and smoke 5 packs of cigarette per day, and diagnosed with lung cancer");
-                break;
-            case 4:  System.out.print("Oldperson's daughter  Savannah  age " +number2  + "  who was diagnosed with  breast cancer");
-                break;
-            case 5:  System.out.print("Oldperson's daughter Linda age " +  number2 + " who is undergoing chemotherapy  ");
-                break;
-            default:   System.out.print(" No match");
-
-        }
-
+        RandomIllness.genRanIllness();
 
     }
 
