@@ -1,0 +1,31 @@
+/**
+ * Created by Teabo on 11/29/2015.
+ */
+public class RandomIllness {
+
+    public static void genRanIllness (){
+
+        // Generate random numbers
+        // ---Requirement 7: Math Class Method---
+        int number = 1+(int)(Math.random()* 7);
+
+        String statement = "By virtue of mutations your children may randomly get: ";
+
+        // ---Requirement 3: Switch Statement---
+        switch (number){
+            case 1:  System.out.println(statement + "Cystic fibrosis");
+                break;
+            case 2:  System.out.print(statement + "Down syndrome");
+                break;
+            case 3:  System.out.print(statement + "Color blindness");
+                break;
+            case 4:  System.out.print(statement + "Haemophilia");
+                break;
+            case 5:  System.out.print(statement + "Haemochromatosis");
+                break;
+            default:   System.out.print("Congratualtions, your children will be free of genetic mutations");
+
+        }
+
+    }
+}
