@@ -15,7 +15,7 @@ public class Person {
     final int MALELIFEEXP = 85;
     final int FEMALELIFEEXP = 87;
     // The default Constructor
-    public Person(int age, double yearOfEducation, int bottlesOfAlcoholConsumedPerDay, double familyHistoryOfBreastCancer, int packOfCigaretteSmokePerDay, int hoursOfSleepPerDay){
+    public Person(){
 
         dateLifeExpectancyCalculate =  new java.util.Date();
     }
@@ -90,7 +90,4 @@ public class Person {
     public static java.util.Date getDateLifeExpectancyCalculate(){
         return  dateLifeExpectancyCalculate;
     }
-
-
-
 }
