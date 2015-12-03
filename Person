@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Person {
     //---Requirement 25: Modifier---
     private int age;
@@ -9,85 +7,133 @@ public class Person {
     private int bottlesOfAlcoholConsumedPerDay;
     private double hoursOfSleepPerDay;
     int numberOfYear;
-    private static java.util.Date dateLifeExpectancyCalculate;
-
+    private int smoking;
+    private int education;
+    private int cancer;
+    private int alcohol;
+    private int sleep;
+    private String gender;
+    private int LE;
     //---Requirement 2: Declaring constants---
-    final int MALELIFEEXP = 85;
-    final int FEMALELIFEEXP = 87;
-    // The default Constructor
-    public Person(){
+    static final int MALELIFEEXP = 85;
+    static final int FEMALELIFEEXP = 87;
 
-        dateLifeExpectancyCalculate =  new java.util.Date();
-    }
+    //---Requirement 15: Constructor---
+    public Person(){}
 
-    public Person(int age, int packOfCigaretteSmokePerDay,double yearOfEducation,double familyHistoryOfCancer,int bottlesOfAlcoholConsumedPerDay,int hoursOfSleepPerDay){
+    public Person(int age, int packOfCigaretteSmokePerDay, double yearOfEducation, double familyHistoryOfCancer, int bottlesOfAlcoholConsumedPerDay, int hoursOfSleepPerDay) {
         //---Requirement 24: Using "this" keyword---
-        this.age =age;
+        this.age = age;
         this.packOfCigaretteSmokePerDay = packOfCigaretteSmokePerDay;
         this.yearOfEducation = yearOfEducation;
         this.familyHistoryOfCancer = familyHistoryOfCancer;
         this.bottlesOfAlcoholConsumedPerDay = bottlesOfAlcoholConsumedPerDay;
         this.hoursOfSleepPerDay = hoursOfSleepPerDay;
-        dateLifeExpectancyCalculate =  new java.util.Date();
-
-
     }
+
     public int getNumberOfYear() {
         numberOfYear = age;
-
         //---Requirement 4: Conditional Operator---
         //---Requirement 5: Operators---
-
         if (getPackOfCigaretteSmokePerDay() > 0 && getYearOfEducation() < 12 && getFamilyHistoryOfCancer() > 50 && getBottlesOfAlcoholConsumedPerDay() > 2
                 && getHoursOfSleepPerDay() < 8) {
-            numberOfYear-=3;
-        }
-        else numberOfYear+=3;
+            numberOfYear -= 3;
+        } else numberOfYear += 3;
         return numberOfYear;
-
     }
 
-
-    public void setAge(int age){
+    public void setAge(int age) {
         this.age = age;
     }
-    public int getPackOfCigaretteSmokePerDay(){
-        return numberOfYear;
+    public int getAge() {
+        return age;
+    }
+
+    public int getPackOfCigaretteSmokePerDay() {
+        return packOfCigaretteSmokePerDay;
     }
 
     //---Requirement 9: Method Passing an argument by value---
-    public void setPackOfCigaretteSmokePerDay(int packOfCigaretteSmokePerDay){
-
+    public void setPackOfCigaretteSmokePerDay(int packOfCigaretteSmokePerDay) {
         this.packOfCigaretteSmokePerDay = packOfCigaretteSmokePerDay;
     }
 
     //---Requirement 10: Return value from method---
-    public double getYearOfEducation(){
+    public double getYearOfEducation() {
         return yearOfEducation;
     }
-    public void setYearOfEducation(double yearOfEducation){
+
+    public void setYearOfEducation(double yearOfEducation) {
         this.yearOfEducation = yearOfEducation;
     }
-    public double getFamilyHistoryOfCancer(){
+
+    public double getFamilyHistoryOfCancer() {
         return familyHistoryOfCancer;
     }
-    public void setFamilyHistoryOfCancer(double familyHistoryOfCancer){
+
+    public void setFamilyHistoryOfCancer(double familyHistoryOfCancer) {
         this.familyHistoryOfCancer = familyHistoryOfCancer;
     }
-    public int getBottlesOfAlcoholConsumedPerDay(){
+
+    public int getBottlesOfAlcoholConsumedPerDay() {
         return bottlesOfAlcoholConsumedPerDay;
     }
-    public void setBottlesOfAlcoholConsumedPerDay(int bottlesOfAlcoholConsumedPerDay){
+
+    public void setBottlesOfAlcoholConsumedPerDay(int bottlesOfAlcoholConsumedPerDay) {
         this.bottlesOfAlcoholConsumedPerDay = bottlesOfAlcoholConsumedPerDay;
     }
-    public double getHoursOfSleepPerDay(){
+
+    public double getHoursOfSleepPerDay() {
         return hoursOfSleepPerDay;
     }
-    public void setHoursOfSleepPerDay(double hoursOfSleepPerDay){
-        this.hoursOfSleepPerDay = hoursOfSleepPerDay;
 
+    public void setHoursOfSleepPerDay(double hoursOfSleepPerDay) {
+        this.hoursOfSleepPerDay = hoursOfSleepPerDay;
     }
-    public static java.util.Date getDateLifeExpectancyCalculate(){
-        return  dateLifeExpectancyCalculate;
+
+    public int getSmoking(){
+        return smoking;
+    }
+
+    public void setSmoking(int smoking){
+        this.smoking = smoking;
+    }
+
+    public int getEducation(){
+        return education;
+    }
+
+    public void setEducation(int education){
+        this.education = education;
+    }
+
+    public int getCancer(){
+        return cancer;
+    }
+
+    public void setCancer(int cancer){
+        this.cancer = cancer;
+    }
+
+    public int getAlcohol(){
+        return alcohol;
+    }
+
+    public void setAlcohol(int alcohol) {
+        this.alcohol = alcohol;
+    }
+
+    public int getSleep(){
+        return sleep;
+    }
+
+    public void setSleep(int sleep){
+        this.sleep = sleep;
+    }
+
+    public String getGender(){return gender;}
+
+    public void setGender(String gender){
+        this.gender = gender;
     }
 }
