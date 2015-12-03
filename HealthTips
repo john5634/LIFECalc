@@ -1,0 +1,22 @@
+public class HealthTips {
+    //---Requirement 11: Array---
+    static private String[] HealthTips = {"Quit smoking, you dummy ", "Limit drinking to 1 drink per night or eat blueberries.", "Begin cancer screenings at age 30."};
+
+
+    // Method print name
+    static public String[] getHealthTips() {
+        return HealthTips;
+    }
+
+    public static void PrintHealthTips(String[] HealthTips) {
+
+        System.out.println("Below are some health tips to extend your life and not die young:");
+
+        System.out.println(" ");
+
+        //---Requirement 8: Loop---
+        for (int i = 0; i < HealthTips.length; i++) {
+            System.out.println(HealthTips[i] + "");
+        }
+    }
+}
