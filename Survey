@@ -1,8 +1,9 @@
 import java.util.Scanner;
+
 public class Survey {
     //---Requirement 14: Create an object---
 
-    Person person1  = new Person();
+    Person person1 = new Person();
 
     public void surveyPerson() {
 //---Requirement 21: Add exception handling---------------------------------------------------------------------------------------------
@@ -34,8 +35,18 @@ public class Survey {
         System.out.println("Enter your name: ");
         //---Requirement 6: String Class Method---
         String name = input.next();
-        System.out.println(name.toUpperCase());
-        System.out.println("     ");
+        person1.setname(name.toUpperCase());
+
+        setLE();
+        CalculateLE();
+
+        if (person1.getAge() >= 55) {
+            Oldperson old1 = new Oldperson(person1.getSmoking(), person1.getEducation(), person1.getCancer(), person1.getAlcohol(), person1.getSleep());
+            person1.setLE(person1.getLE() + old1.getOLDmodifier());
+
+        } else if (person1.getAge() < 55) {
+            printLE();
+        }
 
     }
 
@@ -74,17 +85,22 @@ public class Survey {
             }
         }
     }
+
     public void CalculateLE() {
-        setLE();
-if (person1.getGender().equalsIgnoreCase("male")){
-    System.out.println(Person.MALELIFEEXP + person1.getNumberOfYear() + person1.getAlcohol()+ person1.getCancer()+person1.getEducation()
-    + person1.getSmoking()+ person1.getSleep());
+        if (person1.getGender().equalsIgnoreCase("male") || person1.getGender().equalsIgnoreCase("boy")) {
+            person1.setLE(Person.MALELIFEEXP + person1.getNumberOfYear() + person1.getAlcohol() + person1.getCancer() + person1.getEducation()
+                    + person1.getSmoking() + person1.getSleep());
+        } else if (person1.getGender().equalsIgnoreCase("female") || person1.getGender().equalsIgnoreCase("girl")) {
+            person1.setLE(Person.FEMALELIFEEXP + person1.getNumberOfYear() + person1.getAlcohol() + person1.getCancer() + person1.getEducation()
+                    + person1.getSmoking() + person1.getSleep());
+        }
+    }
 
-}
+
+    public void printLE() {
+
+        System.out.println(person1.getname() + " you will live to be approximately: " + person1.getLE());
 
     }
-    public void printLE(){
-        System.out.println(person1.getPackOfCigaretteSmokePerDay());
-    }
-    Oldperson old1 = new Oldperson(person1.getNumberOfYear(),2,1.0,1.0,5,5);
+
 }
