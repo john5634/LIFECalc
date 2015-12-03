@@ -2,21 +2,18 @@
 //---Requirement 13: Extend another class---
 //---Requirement 19: Inheritance---
 public class Oldperson extends Person {
-    //---Requirement 22: Using Java Library Class (using date)---
-    //---Requirement 23: Static Variable---
-    private static java.util.Date dateLifeExpectancyCalculate;
 
     //---Requirement 11: Array---
-    private String [] HealthTips = {"Quit smoking,you dummy ","Limit drinking to 1 drink per night or eat bluberries ", "begin cancer screenings at age 30 "};
+    private String [] HealthTips = {"Quit smoking, you dummy ","Limit drinking to 1 drink per night or eat blueberries.", "Begin cancer screenings at age 30."};
 
-    //---Requirement 15: Constructor---
     public Oldperson(  int age, int packOfCigaretteSmokePerDay,double yearOfEducation,double familyHistoryOfBreastCancer,int bottlesOfAlcoholConsumedPerDay, int hoursOfSleepPerDay) {
 
         //---Requirement 16: Super Keyword---
         super();
-        dateLifeExpectancyCalculate = new java.util.Date();
-        System.out.println("Below are some health tips to extend your life and not die young");
+
+        System.out.println("Below are some health tips to extend your life and not die young:");
         PrintHealthTips(HealthTips);
+        System.out.println(" ");
     }
 
     // Method print name
@@ -29,14 +26,9 @@ public class Oldperson extends Person {
             System.out.println(HealthTips[i]+ "");
         }
     }
-    //---Requirement 23: Static Method---
-    public static java.util.Date getDateLifeExpectancyCalculate(){
-        return  dateLifeExpectancyCalculate;
-    }
+
 }
 
 //Items still needed:
 //Requirement 10: Method Overloading
-//Requirement 17: Abstraction (EMAIL SHARMA ABOUT THIS!!!)
-//Add printf use
-//Requirement 21: Add exception handling---------------------------------------------------------------------------------------------
+//Requirement 21: Add exception handling---------------------------------------------------------------------------------------
