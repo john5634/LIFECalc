@@ -1,5 +1,6 @@
 public class Person {
     //---Requirement 25: Modifier---
+    private String name;
     private int age;
     private int packOfCigaretteSmokePerDay;
     private double yearOfEducation;
@@ -19,7 +20,8 @@ public class Person {
     static final int FEMALELIFEEXP = 87;
 
     //---Requirement 15: Constructor---
-    public Person(){}
+    public Person() {
+    }
 
     public Person(int age, int packOfCigaretteSmokePerDay, double yearOfEducation, double familyHistoryOfCancer, int bottlesOfAlcoholConsumedPerDay, int hoursOfSleepPerDay) {
         //---Requirement 24: Using "this" keyword---
@@ -45,6 +47,7 @@ public class Person {
     public void setAge(int age) {
         this.age = age;
     }
+
     public int getAge() {
         return age;
     }
@@ -91,31 +94,31 @@ public class Person {
         this.hoursOfSleepPerDay = hoursOfSleepPerDay;
     }
 
-    public int getSmoking(){
+    public int getSmoking() {
         return smoking;
     }
 
-    public void setSmoking(int smoking){
+    public void setSmoking(int smoking) {
         this.smoking = smoking;
     }
 
-    public int getEducation(){
+    public int getEducation() {
         return education;
     }
 
-    public void setEducation(int education){
+    public void setEducation(int education) {
         this.education = education;
     }
 
-    public int getCancer(){
+    public int getCancer() {
         return cancer;
     }
 
-    public void setCancer(int cancer){
+    public void setCancer(int cancer) {
         this.cancer = cancer;
     }
 
-    public int getAlcohol(){
+    public int getAlcohol() {
         return alcohol;
     }
 
@@ -123,17 +126,37 @@ public class Person {
         this.alcohol = alcohol;
     }
 
-    public int getSleep(){
+    public int getSleep() {
         return sleep;
     }
 
-    public void setSleep(int sleep){
+    public void setSleep(int sleep) {
         this.sleep = sleep;
     }
 
-    public String getGender(){return gender;}
+    public int getLE() {
+        return LE;
+    }
 
-    public void setGender(String gender){
+    public void setLE(int LE) {
+        this.LE = LE;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
         this.gender = gender;
+
+    }
+
+    public String getname() {
+        return name;
+    }
+
+    public void setname(String name) {
+        this.name = name;
+
     }
 }
