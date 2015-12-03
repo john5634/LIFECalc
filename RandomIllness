@@ -2,15 +2,15 @@
  * Created by Teabo on 11/29/2015.
  */
 public class RandomIllness {
-
+    //---Requirement 23: Static Variable---
+    static String statement = "By virtue of mutations your children may randomly get: ";
+    //---Requirement 23: Static Method---
     public static void genRanIllness (){
 
         // Generate random numbers
         // ---Requirement 7: Math Class Method---
         int number = 1+(int)(Math.random()* 7);
-
-        String statement = "By virtue of mutations your children may randomly get: ";
-
+        System.out.println(" ");
         // ---Requirement 3: Switch Statement---
         switch (number){
             case 1:  System.out.println(statement + "Cystic fibrosis");
@@ -23,7 +23,7 @@ public class RandomIllness {
                 break;
             case 5:  System.out.print(statement + "Haemochromatosis");
                 break;
-            default:   System.out.print("Congratualtions, your children will be free of genetic mutations");
+            default:   System.out.print("Congratulations, your children will be free of genetic mutations");
 
         }
 
