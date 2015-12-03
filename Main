@@ -6,12 +6,12 @@ public class Main {
 
     public static void main(String[] args) {
 
+        HealthTips.PrintHealthTips(HealthTips.getHealthTips());
 
         Survey survey1  = new Survey();
 
         survey1.surveyPerson();
-        survey1.printLE();
-        survey1.CalculateLE();
+
         RandomIllness.genRanIllness();
 
     }
