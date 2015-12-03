@@ -3,32 +3,20 @@
 //---Requirement 19: Inheritance---
 public class Oldperson extends Person {
 
-    //---Requirement 11: Array---
-    private String [] HealthTips = {"Quit smoking, you dummy ","Limit drinking to 1 drink per night or eat blueberries.", "Begin cancer screenings at age 30."};
+    private int OLDmodifier = -10;
 
-    public Oldperson(  int age, int packOfCigaretteSmokePerDay,double yearOfEducation,double familyHistoryOfBreastCancer,int bottlesOfAlcoholConsumedPerDay, int hoursOfSleepPerDay) {
+    public Oldperson(int smoking, int education, int cancer, int alcohol, int sleep) {
 
         //---Requirement 16: Super Keyword---
         super();
 
-        System.out.println("Below are some health tips to extend your life and not die young:");
-        PrintHealthTips(HealthTips);
-        System.out.println(" ");
     }
 
-    // Method print name
-    public  String[] getHealthTips(){
-        return HealthTips;
-    }
-    public void PrintHealthTips(String [] HealthTips){
-        //---Requirement 8: Loop---
-        for(int i =0; i<HealthTips.length; i++){
-            System.out.println(HealthTips[i]+ "");
-        }
+    public int getOLDmodifier() {
+        return OLDmodifier;
     }
 
+    public void setOLDmodifier(int OLDmodifier) {
+        this.OLDmodifier = OLDmodifier;
+    }
 }
-
-//Items still needed:
-//Requirement 10: Method Overloading
-//Requirement 21: Add exception handling---------------------------------------------------------------------------------------
