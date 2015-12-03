@@ -1,43 +1,90 @@
 import java.util.Scanner;
-
 public class Survey {
-
     //---Requirement 14: Create an object---
-    Person person1  = new Person( 789, 789, 789.0, 789, 789, 789);
-    public void surveyPerson() {
 
+    Person person1  = new Person();
+
+    public void surveyPerson() {
 //---Requirement 21: Add exception handling---------------------------------------------------------------------------------------------
 //---Requirement 26: Println Method---
+//---Requirement 22: Using Java Library Class (using date)---
 
-    Scanner input = new Scanner(System.in);
+        java.util.Date Currentdate = new java.util.Date();
+        String startedOn = "This survey was started on: ";
+        System.out.printf("%S %s", startedOn, Currentdate);
+        System.out.println(" ");
 
-    System.out.println("Enter your age: ");
-    person1.setAge(input.nextInt());
+        Scanner input = new Scanner(System.in);
 
-    System.out.println("How many packs of cigarettes do you smoke per day? ");
-    person1.setPackOfCigaretteSmokePerDay(input.nextInt());
+        System.out.println("Enter your age: ");
+        person1.setAge(input.nextInt());
+        System.out.println("Enter your gender: ");
+        person1.setGender(input.next());
+        System.out.println("How many packs of cigarettes do you smoke per day? ");
+        person1.setPackOfCigaretteSmokePerDay(input.nextInt());
+        System.out.println("How many years of college have you completed? ");
+        person1.setYearOfEducation(input.nextInt());
+        System.out.println("Do you have a family history of cancer? Enter the number of relatives affected: ");
+        person1.setFamilyHistoryOfCancer(input.nextDouble());
+        System.out.println("How many drinks of alcohol do you consume on a weekly basis? ");
+        person1.setBottlesOfAlcoholConsumedPerDay(input.nextInt());
+        System.out.println("How many hours do you sleep per night?");
+        person1.setHoursOfSleepPerDay(input.nextInt());
 
-    System.out.println("How many years of college have you completed? ");
-    person1.setYearOfEducation(input.nextInt());
+        System.out.println("Enter your name: ");
+        //---Requirement 6: String Class Method---
+        String name = input.next();
+        System.out.println(name.toUpperCase());
+        System.out.println("     ");
 
-    System.out.println("Do you have a family history of cancer? ");
-    double familyHistoryOfBreastCancer = input.nextDouble();
-    System.out.println("How many drinks of alcohol do you consume on a weekly basis? ");
-    int bottlesOfAlcoholConsumedPerDay = input.nextInt();
-    System.out.println("How many hours do you sleep per night?");
-    int hoursOfSleepPerDay = input.nextInt();
-    System.out.println("Enter your name: ");
-    //---Requirment 6: String Class Method---
-    //String name = input.nextLine();
-    //System.out.println(name.toUpperCase());
-    System.out.println("     ");
-
-
-}
-    public void printLE(){
-
-        System.out.println(person1.getBottlesOfAlcoholConsumedPerDay());
     }
 
+    public void setLE() {
+
+        {
+
+            if (person1.getPackOfCigaretteSmokePerDay() > 1) {
+                person1.setSmoking(-5);
+            } else if (person1.getPackOfCigaretteSmokePerDay() == 0) {
+                person1.setSmoking(5);
+            }
+
+            if (person1.getYearOfEducation() > 2) {
+                person1.setEducation(-2);
+            } else if (person1.getYearOfEducation() < 2) {
+                person1.setEducation(2);
+            }
+
+            if (person1.getFamilyHistoryOfCancer() > 0) {
+                person1.setCancer(-5);
+            } else if (person1.getFamilyHistoryOfCancer() == 0) {
+                person1.setCancer(3);
+            }
+
+            if (person1.getBottlesOfAlcoholConsumedPerDay() > 1) {
+                person1.setAlcohol(-3);
+            } else if (person1.getBottlesOfAlcoholConsumedPerDay() <= 1) {
+                person1.setAlcohol(2);
+            }
+
+            if (person1.getHoursOfSleepPerDay() < 8) {
+                person1.setSleep(-8);
+            } else if (person1.getHoursOfSleepPerDay() >= 8) {
+                person1.setSleep(+9);
+            }
+        }
+    }
+    public void CalculateLE() {
+        setLE();
+if (person1.getGender().equalsIgnoreCase("male")){
+    System.out.println(Person.MALELIFEEXP + person1.getNumberOfYear() + person1.getAlcohol()+ person1.getCancer()+person1.getEducation()
+    + person1.getSmoking()+ person1.getSleep());
+
 }
 
+    }
+    public void printLE(){
+        System.out.println(person1.getPackOfCigaretteSmokePerDay());
+    }
+    Oldperson old1 = new Oldperson(person1.getNumberOfYear(),2,1.0,1.0,5,5);
+}
