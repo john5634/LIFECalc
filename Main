@@ -13,6 +13,8 @@ public class Main {
         survey1.surveyPerson();
 
         RandomIllness.genRanIllness();
+        
+        System.out.println("Life Expectancy Calculator created by Team Cup 'o Java");
 
     }
 
