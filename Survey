@@ -43,6 +43,7 @@ public class Survey {
         if (person1.getAge() >= 55) {
             Oldperson old1 = new Oldperson(person1.getSmoking(), person1.getEducation(), person1.getCancer(), person1.getAlcohol(), person1.getSleep());
             person1.setLE(person1.getLE() + old1.getOLDmodifier());
+            printLE();
 
         } else if (person1.getAge() < 55) {
             printLE();
