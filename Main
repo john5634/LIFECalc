@@ -14,7 +14,7 @@ public class Main {
 
         RandomIllness.genRanIllness();
         
-        System.out.println("Life Expectancy Calculator created by Team Cup 'o Java");
+        System.out.println("Thank you for playing! Life Expectancy Calculator created by Team Cup 'o Java");
 
     }
 
